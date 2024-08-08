@@ -10,6 +10,7 @@ import (
 
 	"github.com/RafaelEstevam/go-rocket/internal/api"
 	"github.com/RafaelEstevam/go-rocket/internal/store/pgstore"
+
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/joho/godotenv"
 )
@@ -29,7 +30,6 @@ func main() {
 		os.Getenv("WSRS_DATABASE_PORT"),
 		os.Getenv("WSRS_DATABASE_NAME"),
 	))
-
 	if err != nil {
 		panic(err)
 	}
